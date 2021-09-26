@@ -9,26 +9,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class ProfileApplication extends SpringBootServletInitializer {
+public class ProfileExternalApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProfileApplication.class, args);
+        SpringApplication.run(ProfileExternalApplication.class, args);
         System.out.println("OK");
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ProfileApplication.class);
+        return application.sources(ProfileExternalApplication.class);
     }
 
     @RestController
     @RequestMapping("/dr")
-    public class ProfileController{
+    public class ProfileExternalController {
 
         @GetMapping("/get")
-        public String profileTest(){
+        public String profileTest() {
             return "挣脱枷锁";
         }
 
     }
+
 }
