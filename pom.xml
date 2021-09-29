@@ -12,6 +12,7 @@
         <module>spring-boot-profile</module>
         <module>spring-boot-profile-default</module>
         <module>spring-boot-profile-external</module>
+        <module>spring-boot-log</module>
     </modules>
 
     <properties>
